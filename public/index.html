@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X-Shop</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-container">
+          <!-- header-brand -->
+          <div class="header-brand">
+            <h2 class="header-caption">
+              X-SHOP.COM - SINCE 2012 - LUÔN CAM KẾT HÀNG CHÍNH HÃNG
+            </h2>
+
+            <!-- header-user -->
+            <div class="header-user">
+              <i class="fa fa-user header-icon">
+                <!-- header-dropdown -->
+                <div class="header-dropdown-content">
+                  <a href="./admin/signup.html" class="header-dropdown-link"
+                    >Đăng ký</a
+                  >
+                  <a href="./admin/login.html" class="header-dropdown-link"
+                    >Đăng nhập</a
+                  >
+                  <a href="#" class="header-dropdown-link">Giỏ hàng</a>
+                  <a href="#" class="header-dropdown-link">Thanh toán</a>
+                  <a href="#" class="header-dropdown-link">Tra cứu đơn hàng</a>
+                </div>
+              </i>
+              <span class="header-text">Tài khoản</span>
+              <i class="fa-solid fa-chevron-down header-icon"></i>
+            </div>
+          </div>
+
+          <!-- header-controller -->
+          <div class="header-control">
+            <!-- header-logo -->
+            <a href="index.html" class="header-image">
+              <img src="./image/xshop.png" alt="" class="header-img" />
+            </a>
+
+            <!-- header-search-bar -->
+            <form class="header-search">
+              <input
+                type="text"
+                class="header-input"
+                placeholder="Tìm kiếm ..."
+              />
+              <div class="header-search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </form>
+
+            <!-- header-login-cart -->
+            <div class="header-act">
+              <div class="header-act-icon">
+                <a href="./admin/login.html">
+                  <i class="fa fa-user header-user-icon"></i>
+                </a>
+              </div>
+              <div class="header-act-icon">
+                <a href="#">
+                  <i class="fa-solid fa-cart-shopping header-cart-icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- header-navigation -->
+          <nav class="header-nav">
+            <ul class="header-menu">
+              <li class="header-item">
+                <a href="./index.html" class="header-link">Trang chủ</a>
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link">Giới thiệu</a>
+              </li>
+              <li class="header-item">
+                <a href="./products.html" class="header-link">Sản phẩm</a>
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link">Blog</a>
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link">Liên hệ</a>
+              </li>
+              <li class="header-item">
+                <a href="#" class="header-link">Sale off</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- End-header -->
+
+      <!-- Header-slide -->
+      <div class="header-slide">
+        <div class="header-slide-item fade">
+          <img src="./image/slideshow_1.jpg" />
+        </div>
+
+        <div class="header-slide-item fade">
+          <img src="./image/slideshow_2.jpg" />
+        </div>
+
+        <div class="header-slide-item fade">
+          <img src="./image/slideshow_4.jpg" />
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)"
+          ><i class="fa-solid fa-chevron-left header-icon-prev"></i>
+        </a>
+        <a class="next" onclick="plusSlides(1)">
+          <i class="fa-solid fa-chevron-right header-icon-next"></i>
+        </a>
+      </div>
+      <!-- End header-slide -->
+
+      <!-- Main-content -->
+      <main class="main">
+        <div class="main-container">
+          <!-- hot-products -->
+          <section class="hot-pro">
+            <h1 class="hot-pro-title">SẢN PHẨM HOT</h1>
+
+            <div class="hot-pro-list">
+              <div class="hot-pro-item">
+                <a href="./detail_product.html" class="hot-pro-image">
+                  <img
+                    src="./image/product-01.webp"
+                    alt=""
+                    class="hot-pro-img"
+                  />
+                </a>
+                <div class="hot-pro-content">
+                  <h2 class="hot-pro-title--small">
+                    <a href="#">
+                      Nike Mercurial Superfly 8 Elite FG Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+                  <span class="hot-pro-sale">7,895,000đ</span>
+                  <span class="hot-pro-price">4,950,000</span>
+                </div>
+              </div>
+              <div class="hot-pro-item">
+                <a href="#" class="hot-pro-image">
+                  <img
+                    src="./image/product-02.webp"
+                    alt=""
+                    class="hot-pro-img"
+                  />
+                </a>
+                <div class="hot-pro-content">
+                  <h2 class="hot-pro-title--small">
+                    <a href="#">
+                      Nike Mercurial Superfly 8 Elite FG Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+                  <span class="hot-pro-sale">7,895,000đ</span>
+                  <span class="hot-pro-price">4,950,000</span>
+                </div>
+              </div>
+              <div class="hot-pro-item">
+                <a href="#" class="hot-pro-image">
+                  <img
+                    src="./image/product-03.webp"
+                    alt=""
+                    class="hot-pro-img"
+                  />
+                </a>
+                <div class="hot-pro-content">
+                  <h2 class="hot-pro-title--small">
+                    <a href="#">
+                      Nike Mercurial Superfly 8 Elite FG Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+                  <span class="hot-pro-sale">7,895,000đ</span>
+                  <span class="hot-pro-price">4,950,000</span>
+                </div>
+              </div>
+              <div class="hot-pro-item">
+                <a href="#" class="hot-pro-image">
+                  <img
+                    src="./image/product-04.webp"
+                    alt=""
+                    class="hot-pro-img"
+                  />
+                </a>
+                <div class="hot-pro-content">
+                  <h2 class="hot-pro-title--small">
+                    <a href="#">
+                      Nike Mercurial Superfly 8 Elite FG Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+                  <span class="hot-pro-sale">7,895,000đ</span>
+                  <span class="hot-pro-price">4,950,000</span>
+                </div>
+              </div>
+              <div class="hot-pro-item">
+                <a href="#" class="hot-pro-image">
+                  <img
+                    src="./image/product-05.webp"
+                    alt=""
+                    class="hot-pro-img"
+                  />
+                </a>
+                <div class="hot-pro-content">
+                  <h2 class="hot-pro-title--small">
+                    <a href="#">
+                      Nike Mercurial Superfly 8 Elite FG Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+                  <span class="hot-pro-sale">7,895,000đ</span>
+                  <span class="hot-pro-price">4,950,000</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end-hot-products -->
+
+          <!-- feature-products -->
+          <section class="feature-pro">
+            <h1 class="feature-pro-title">Sản phẩm nổi bật</h1>
+
+            <div class="feature-pro-list">
+              <div class="feature-pro-item">
+                <a href="#" class="feature-pro-image"
+                  ><img
+                    src="./image/product-01.webp"
+                    alt=""
+                    class="feature-pro-img"
+                /></a>
+
+                <div class="feature-pro-content">
+                  <h2 class="feature-pro-title--secondary">
+                    <a href="#">
+                      Nike Mercurial Vapor 14 Elite AG-PRO Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+
+                  <span class="feature-pro-sale">3,600,000₫</span>
+                  <span class="feature-pro-price">2,790,000₫</span>
+                </div>
+              </div>
+              <div class="feature-pro-item">
+                <a href="#" class="feature-pro-image"
+                  ><img
+                    src="./image/product-02.webp"
+                    alt=""
+                    class="feature-pro-img"
+                /></a>
+
+                <div class="feature-pro-content">
+                  <h2 class="feature-pro-title--secondary">
+                    <a href="#">
+                      Nike Mercurial Vapor 14 Elite AG-PRO Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+
+                  <span class="feature-pro-sale">3,600,000₫</span>
+                  <span class="feature-pro-price">2,790,000₫</span>
+                </div>
+              </div>
+              <div class="feature-pro-item">
+                <a href="#" class="feature-pro-image"
+                  ><img
+                    src="./image/product-03.webp"
+                    alt=""
+                    class="feature-pro-img"
+                /></a>
+
+                <div class="feature-pro-content">
+                  <h2 class="feature-pro-title--secondary">
+                    <a href="#">
+                      Nike Mercurial Vapor 14 Elite AG-PRO Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+
+                  <span class="feature-pro-sale">3,600,000₫</span>
+                  <span class="feature-pro-price">2,790,000₫</span>
+                </div>
+              </div>
+              <div class="feature-pro-item">
+                <a href="#" class="feature-pro-image"
+                  ><img
+                    src="./image/product-04.webp"
+                    alt=""
+                    class="feature-pro-img"
+                /></a>
+
+                <div class="feature-pro-content">
+                  <h2 class="feature-pro-title--secondary">
+                    <a href="#">
+                      Nike Mercurial Vapor 14 Elite AG-PRO Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+
+                  <span class="feature-pro-sale">3,600,000₫</span>
+                  <span class="feature-pro-price">2,790,000₫</span>
+                </div>
+              </div>
+              <div class="feature-pro-item">
+                <a href="#" class="feature-pro-image"
+                  ><img
+                    src="./image/product-05.webp"
+                    alt=""
+                    class="feature-pro-img"
+                /></a>
+
+                <div class="feature-pro-content">
+                  <h2 class="feature-pro-title--secondary">
+                    <a href="#">
+                      Nike Mercurial Vapor 14 Elite AG-PRO Blueprint - Chlorine
+                      Blue/Laser Orange/Marina
+                    </a>
+                  </h2>
+
+                  <span class="feature-pro-sale">3,600,000₫</span>
+                  <span class="feature-pro-price">2,790,000₫</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end-feature-products -->
+
+          <!-- searching-product-category -->
+          <section class="search-pro">
+            <h1 class="search-pro-title">BẠN ĐANG TÌM</h1>
+
+            <div class="search-pro-list--main">
+              <div class="search-pro--main-item">
+                <a href="#" class="search-pro--main-image">
+                  <img
+                    src="./image/search-pro-01.jpg"
+                    alt=""
+                    class="search-pro-main-img"
+                  />
+                </a>
+
+                <div class="search-pro-main-content">
+                  <h2 class="search-pro-main-title">
+                    <a href="#"> GIÀY CỎ NHÂN TẠO (ĐẾ TF) </a>
+                  </h2>
+                  <span class="search-pro-main-text"
+                    >GIÀY DÀNH CHO MẶT SÂN CỎ NHÂN TẠO 5-7 NGƯỜI</span
+                  >
+                </div>
+              </div>
+              <div class="search-pro--main-item">
+                <a href="#" class="search-pro--main-image">
+                  <img
+                    src="./image/search-pro-02.jpg"
+                    alt=""
+                    class="search-pro-main-img"
+                  />
+                </a>
+
+                <div class="search-pro-main-content">
+                  <h2 class="search-pro-main-title">
+                    <a href="#"> GIÀY CỎ TỰ NHIÊN (ĐẾ FG, AG, SG)</a>
+                  </h2>
+                  <span class="search-pro-main-text"
+                    >Giày dành cho mặt sân cỏ tự nhiên 11 người</span
+                  >
+                </div>
+              </div>
+              <div class="search-pro--main-item">
+                <a href="#" class="search-pro--main-image">
+                  <img
+                    src="./image/search-pro-03.jpg"
+                    alt=""
+                    class="search-pro-main-img"
+                  />
+                </a>
+
+                <div class="search-pro-main-content">
+                  <h2 class="search-pro-main-title">
+                    <a href="#"> GIÀY FUTSAL (ĐẾ IC) </a>
+                  </h2>
+                  <span class="search-pro-main-text"
+                    >Giày dành cho sân xi măng và sân Futsal trong nhà</span
+                  >
+                </div>
+              </div>
+              <div class="search-pro--main-item">
+                <a href="#" class="search-pro--main-image">
+                  <img
+                    src="./image/search-pro-04.jpg"
+                    alt=""
+                    class="search-pro-main-img"
+                  />
+                </a>
+
+                <div class="search-pro-main-content">
+                  <h2 class="search-pro-main-title">
+                    <a href="#"> GIÀY SALE OFF (50 - 70% OFF) </a>
+                  </h2>
+                  <span class="search-pro-main-text"
+                    >Giày đá banh đang SALE OFF đến 70%</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="search-pro-secondary-list">
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-01.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#"> GIÀY ĐÁ BANH TRẺ EM </a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-02.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#"> ÁO BÓNG ĐÁ CHÍNH HÃNG </a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-03.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#">QUẢ BÓNG ĐÁ</a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-04.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#"> VỚ BÓNG ĐÁ </a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-05.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#"> BẢO VỆ ỐNG ĐỒNG </a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+              <div class="search-pro-secondary-item">
+                <a href="#" class="search-pro-secondary-image">
+                  <img
+                    src="./image/search-category-06.webp"
+                    alt=""
+                    class="search-pro-secondary-img"
+                  />
+                </a>
+
+                <div class="search-pro-secondary-detail">
+                  <h3 class="search-pro-secondary-title">
+                    <a href="#"> PHỤ KIỆN RA SÂN </a>
+                  </h3>
+                  <i
+                    class="fa-solid fa-chevron-right search-pro-secondary-icon"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end-searching-product-category -->
+
+          <!-- product-brand -->
+          <section class="brand">
+            <h1 class="brand-title">THƯƠNG HIỆU</h1>
+            <div class="brand-list">
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-01.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH NIKE</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-02.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH ADIDAS</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-03.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH PUMA</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-04.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH MIZUNO</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-05.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH ASICS</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+              <div class="brand-item">
+                <a href="#" class="brand-image">
+                  <img src="./image/brand-06.jpg" alt="" class="brand-img" />
+                </a>
+
+                <div class="brand-detail">
+                  <h2 class="brand-title-secondary">
+                    <a href="#">GIÀY ĐÁ BANH KAMITO</a>
+                  </h2>
+                  <i class="fa-solid fa-chevron-right brand-icon"></i>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end-product-brand -->
+
+          <!-- product-news -->
+          <section class="social-news">
+            <h1 class="social-news-title">TIN TỨC GIÀY</h1>
+            <div class="social-news-list">
+              <div class="social-news-item">
+                <a href="#" class="social-news-image">
+                  <img
+                    src="./image/news-01.webp"
+                    alt=""
+                    class="social-news-img"
+                  />
+                </a>
+
+                <div class="social-news-content">
+                  <h2 class="social-news-title--secondary">
+                    <a href="#">
+                      NIKE LỘ DIỆN TRANG PHỤC THI ĐẤU SÂN NHÀ TẠI WORLD CUP 2022
+                      DÀNH CHO CÁC ĐỘI BÓNG
+                    </a>
+                  </h2>
+                  <p class="social-news-desc">
+                    Để hỗ trợ các đội đại diện của mình chuẩn bị cho World Cup
+                    và các giải đấu quốc tế sắp tới, Nike đã chính...
+                  </p>
+                </div>
+              </div>
+              <div class="social-news-item">
+                <a href="#" class="social-news-image">
+                  <img
+                    src="./image/news-02.webp"
+                    alt=""
+                    class="social-news-img"
+                  />
+                </a>
+
+                <div class="social-news-content">
+                  <h2 class="social-news-title--secondary">
+                    <a href="#">
+                      Puma hoàn thiện BST 'Fastest Football' với phiên bản King
+                      Platinum mới
+                    </a>
+                  </h2>
+                  <p class="social-news-desc">
+                    Hoàn thiện bộ sưu tập ‘Fastest Pack', PUMA phát hành giày đá
+                    banh Puma King Platinum 21 để hoàn chỉnh đội hình 3 silo
+                    cùng...
+                  </p>
+                </div>
+              </div>
+              <div class="social-news-item">
+                <a href="#" class="social-news-image">
+                  <img
+                    src="./image/news-03.webp"
+                    alt=""
+                    class="social-news-img"
+                  />
+                </a>
+
+                <div class="social-news-content">
+                  <h2 class="social-news-title--secondary">
+                    <a href="#">
+                      KHÁM PHÁ BỘ SƯU TẬP GIÀY ĐÁ BÓNG ẤN TƯỢNG NEW BALANCE
+                      'DEEP EARTH' PACK
+                    </a>
+                  </h2>
+                  <p class="social-news-desc">
+                    Tiếp nối BST Gold Pack mới vừa ra mắt, New Balance phát hành
+                    bộ sưu tập giày đá banh ‘Deep Earth’ với gam màu vàng/đen -
+                    sự kết hợp cơ bản nhưng vô cùng được ưa chuộng. New Balance
+                    'Deep Earth' bao gồm những nâng cấp thế hệ mới nhất của
+                    Furon và Tekela. Hãy cùng Neymarsport khám phá ngay sau đây
+                    nhé.
+                  </p>
+                </div>
+              </div>
+              <div class="social-news-item">
+                <a href="#" class="social-news-image">
+                  <img
+                    src="./image/news-04.webp"
+                    alt=""
+                    class="social-news-img"
+                  />
+                </a>
+
+                <div class="social-news-content">
+                  <h2 class="social-news-title--secondary">
+                    <a href="#">
+                      KHÁM PHÁ PHIÊN BẢN GIỚI HẠN ĐẶC BIỆT NIKE PHANTOM ULTRA
+                      VENOM HOÀN TOÀN MỚI
+                    </a>
+                  </h2>
+                  <p class="social-news-desc">
+                    Nike vừa phát hành một đôi giày đá banh vô cùng đặc biệt. Đó
+                    là Nike Phantom Ultra Venom, một phiên bản giới hạn nhằm tri
+                    ân các mẫu Hypervenom huyền thoại, kết hợp chúng với những
+                    công nghệ hiện đại của dòng Phantom để tạo nên diện mạo
+                    tương lai của silo này trong thời gian tới. Thiết kế mới này
+                    là sự kết hợp của Phantom GT2, pha chút gợi nhớ với dòng
+                    Hypervenom 3 và chất liệu từ dòng Mercurial Vapor. Hãy cùng
+                    Neymarsport khám phá chi tiết đôi giày thú vị này ngay sau
+                    đây nhé!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- end-product-news -->
+        </div>
+      </main>
+      <!-- End-main-content -->
+
+      <!-- Shop information -->
+      <section class="shop-info">
+        <div class="shop-info-container">
+          <div class="shop-info-list">
+            <div class="shop-info-item support">
+              <h1 class="shop-info-title">HỖ TRỢ</h1>
+              <div class="support-content">
+                <h4 class="support-title">
+                  GỌI TƯ VẤN - ĐẶT HÀNG ONLINE (08:30 - 21: 00 MỖI NGÀY)
+                </h4>
+                <p class="support-info">
+                  <span class="support-hotline">0789.970.907</span>
+                  <span class="support-date"
+                    >Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</span
+                  >
+                </p>
+
+                <h4 class="support-title">GÓP Ý & KHIẾU NẠI (08:30 - 20:30)</h4>
+                <p class="support-info">
+                  <span class="support-hotline">0902.970.907</span>
+                  <span class="support-date"
+                    >Tất cả các ngày trong tuần (Trừ tết Âm Lịch)</span
+                  >
+                </p>
+
+                <h4 class="support-social">
+                  THEO DÕI CHÚNG TÔI TRÊN CÁC NỀN TẢNG
+                </h4>
+                <div class="support-social-list">
+                  <div class="support-social-item">
+                    <a href="#" class="support-social-link">
+                      <i class="fa-brands fa-facebook support-social-icon"></i>
+                    </a>
+                  </div>
+                  <div class="support-social-item">
+                    <a href="#" class="support-social-link">
+                      <i class="fa-brands fa-instagram support-social-icon"></i>
+                    </a>
+                  </div>
+                  <div class="support-social-item">
+                    <a href="#" class="support-social-link">
+                      <i class="fa-brands fa-youtube support-social-icon"></i>
+                    </a>
+                  </div>
+                  <div class="support-social-item">
+                    <a href="#" class="support-social-link">
+                      <i class="fa-brands fa-twitter support-social-icon"></i>
+                    </a>
+                  </div>
+                  <div class="support-social-item">
+                    <a href="#" class="support-social-link">
+                      <i class="fa-brands fa-pinterest support-social-icon"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="shop-info-item system">
+              <h1 class="shop-info-title">HỆ THỐNG CỬA HÀNG</h1>
+
+              <div class="system-caption">
+                <h1 class="system-text">Cửa hàng</h1>
+                <p class="system-work">MỞ CỬA TỪ: 9h-21h 7 NGÀY TRONG TUẦN</p>
+              </div>
+              <div class="system-image">
+                <img src="./image/system.webp" alt="" class="system-img" />
+              </div>
+            </div>
+
+            <div class="shop-info-item gallery">
+              <h1 class="shop-info-title">HÌNH ẢNH KHÁCH HÀNG</h1>
+
+              <div class="gallery-hover">
+                <a href="#" class="gallery-image">
+                  <img
+                    src="./image/shop-gallery.webp"
+                    alt=""
+                    class="gallery-img"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End-shop-information -->
+
+      <!-- Footer -->
+      <footer class="footer">
+        <!-- footer-main-content -->
+        <div class="footer-main">
+          <div class="footer-main-container">
+            <div class="footer-main-list">
+              <div class="footer-main-item shop-system">
+                <h2 class="footer-main-title">HỆ THỐNG CỬA HÀNG</h2>
+
+                <div class="shop-system-content">
+                  <div class="shop-system-info">
+                    <h2 class="shop-system-name">X- Shop Hà Nội</h2>
+                    <p class="shop-system-address">
+                      Địa chỉ: Tòa nhà FPT Polytechnic, P. Trịnh Văn Bô, Xuân
+                      Phương, Nam Từ Liêm, Hà Nội
+                    </p>
+                    <p class="shop-system-phone">
+                      SĐT Bàn: 0286.2713.907 ( 9h-21h)
+                    </p>
+                  </div>
+                  <div class="shop-system-info">
+                    <h2 class="shop-system-name">X- Shop TP HCM</h2>
+                    <p class="shop-system-address">
+                      Địa chỉ: 43A Điện Biên Phủ, P. 15, Q. Bình Thạnh, TP HCM
+                    </p>
+                    <p class="shop-system-phone">
+                      SĐT Bàn: 0282.2456.637 ( 9h-21h)
+                    </p>
+                  </div>
+                  <div class="shop-system-info">
+                    <h2 class="shop-system-name">X- Shop THỦ ĐỨC</h2>
+                    <p class="shop-system-address">
+                      Địa chỉ: 148/7 Hoàng Diệu 2, P. Linh Chiểu, TP. Thủ Đức
+                    </p>
+                    <p class="shop-system-phone">
+                      SĐT Bàn: 0286.2713.504 (9h-21h)
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="footer-main-item shop-support">
+                <h2 class="footer-main-title">HỆ THỐNG CỬA HÀNG</h2>
+                <ul class="shop-support-list">
+                  <li class="shop-support-item">Cam kết từ X - Shop</li>
+                  <li class="shop-support-item">Hướng dẫn chọn size</li>
+                  <li class="shop-support-item">Hướng dẫn mua hàng</li>
+                  <li class="shop-support-item">Hướng dẫn đặt hàng online</li>
+                  <li class="shop-support-item">Quy định đổi hàng</li>
+                  <li class="shop-support-item">Chính sách vận chuyển</li>
+                  <li class="shop-support-item">Ưu đãi quà tặng</li>
+                  <li class="shop-support-item">Chính sách bảo mật</li>
+                </ul>
+              </div>
+
+              <div class="footer-main-item facebook">
+                <h2 class="footer-main-title">HỆ THỐNG CỬA HÀNG</h2>
+              </div>
+
+              <div class="footer-main-item instagram">
+                <h2 class="footer-main-title">HỆ THỐNG CỬA HÀNG</h2>
+                <div class="instagram-gallery">
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-01.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-02.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-03.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-04.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-05.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-06.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-07.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-08.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                  <div class="instagram-item">
+                    <a href="#" class="instagram-image">
+                      <img
+                        src="./image/insta-img-09.jpg"
+                        alt=""
+                        class="instagram-img"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- footer-secondary-content -->
+        <div class="footer-secondary">
+          <div class="footer-secondary-container">
+            <div class="shop-enterprise">
+              <ul class="shop-business">
+                <li><a href="#"> Công ty TNHH X-Shop </a></li>
+                <li><a href="#"> Mã số Doanh Nghiệp : 0316234396 </a></li>
+                <li>
+                  <a href="#"
+                    >Ngày cấp : 21/04/2020, Nơi cấp : Sở kế hoạch và đầu tư
+                    TP.HCM
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Địa chỉ văn phòng: 43A Điện Biên Phủ, Phường 15, Q. Bình
+                    Thạnh
+                  </a>
+                </li>
+              </ul>
+
+              <div class="shop-license">
+                <img src="./image/lis-01.webp" alt="" />
+                <img src="./image/lis-02.png" alt="" />
+              </div>
+            </div>
+
+            <p class="shop-copyright">© Bản quyền thuộc về X-Shop</p>
+          </div>
+        </div>
+      </footer>
+      <!-- End footer -->
+    </div>
+
+    <script src="./js/slide.js"></script>
+  </body>
+</html>

@@ -1,3 +1,41 @@
+<?php 
+$conn = mysqli_connect("localhost", "root", "", "x-shop-asm");
+
+$tong_tien = 0;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_update'])) {
+  foreach ($_SESSION['gio_hang'] as $i => &$hang) {
+      $so_luong_moi = $_POST['so_luong_' . $i];
+      if (is_numeric($so_luong_moi) && $so_luong_moi > 0) {
+          $thanh_tien_cu = $hang[3] * $hang[4]; 
+          $hang[4] = $so_luong_moi;
+          $thanh_tien_moi = $hang[3] * $so_luong_moi;
+          $tong_tien += $thanh_tien_moi - $thanh_tien_cu;
+          // Cập nhật tổng tiền
+      }
+  }
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_pay'])) {
+  $ho_ten = isset($_POST['ho_ten']) ? $_POST['ho_ten'] : 'hidden';
+  $dia_chi = isset($_POST['dia_chi']) ? $_POST['dia_chi'] : '';
+  $ghi_chu = isset($_POST['ghi_chu']) ? $_POST['ghi_chu'] : '';
+  $sql_insert_don_hang = "INSERT INTO don_hang (ho_ten, dia_chi, ghi_chu, tong_tien) VALUES ('$ho_ten', '$dia_chi', '$ghi_chu', '$tong_tien')";
+  $result_insert_don_hang = mysqli_query($conn, $sql_insert_don_hang);
+  if ($result_insert_don_hang) {
+      $id_don_hang = mysqli_insert_id($conn);
+      foreach ($_SESSION['gio_hang'] as $i => $hang) {
+          $ma_san_pham = $hang[0];
+          $so_luong = $hang[4];
+          $gia_ban = $hang[3];
+          // $sql_insert_chi_tiet_don_hang = "INSERT INTO chi_tiet_don_hang (id_don_hang, ma_san_pham, so_luong, gia_ban) VALUES ('$id_don_hang', '$ma_san_pham', '$so_luong', '$gia_ban')";
+          // mysqli_query($conn, $sql_insert_chi_tiet_don_hang);
+      }
+      unset($_SESSION['gio_hang']);
+  }
+}
+?>
+
 <div class="main-pro-cart">
   <div class="pro-cart">
     <h2 class="pro-cart-title">Giỏ hàng</h2>
@@ -5,6 +43,7 @@
       <table class="form-pro-table">
         <thead class="form-pro-thead">
           <tr>
+            <th></th>
             <th></th>
             <th class="form-pro-title">Tên sản phẩm</th>
             <th>Số lượng</th>
@@ -23,6 +62,8 @@
             $xoa_sp = "index.php?act=xoa_gio_hang&ma_gio_hang=" . $i;
           ?>
             <tr>
+              <td>
+              </td>
               <td class="form-pro-image">
                 <img src="<?= $hinh_anh ?>" alt="" class="pro-cart-image" />
               </td>
@@ -33,7 +74,9 @@
                 </a>
               </td>
               <td class="form-pro-quantity">
-                <input type="number" min="1" name="so_luong" disabled step="1" value="<?= $hang[4] ?>" class="pro-cart-input" />
+                <!-- <input type="number" min="1" name="so_luong" disabled step="1" value="<?= $hang[4] ?>" class="pro-cart-input" /> -->
+                <input type="number" min="1" name="so_luong_<?= $i ?>" step="1" value="<?= $hang[4] ?>" class="pro-cart-input" />
+
               </td>
               <td class="form-pro-price"><?= number_format($thanh_tien, "0", ",") ?>đ</td>
               <td class="form-pro-remove">
@@ -86,17 +129,21 @@
           </div>
         </div>
 
-        <div class="form-control-right">
+        <div class="form-control-right" style="display:flex; gap:10px;">
+          <form method="post">
           <button type="submit" class="form-cart-update" name="btn_cart_update">
-            <a href="#">Cập nhật
+            <a>Cập nhật
               <i class="fa-solid fa-chevron-right form-cart-icon"></i>
             </a>
           </button>
-          <button class="form-cart-pay" type="button">
-            <a href="index.php?act=thanh_toan">Thanh toán
+          </form>
+          <form method="post">
+          <button class="form-cart-pay" type="submit" name="btn_cart_pay">
+            <a >Thanh toán
               <i class="fa-solid fa-chevron-right form-cart-icon"></i>
             </a>
           </button>
+          </form>
         </div>
       </div>
     </form>

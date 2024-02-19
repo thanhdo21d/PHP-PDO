@@ -1,19 +1,19 @@
  <!-- Header-slide -->
  <div class="header-slide">
    <div class="header-slide-item fade">
-     <img src="././public/image/slideshow_5.jpg" />
+     <img src="././public/image/slide.jpg" />
    </div>
 
    <div class="header-slide-item fade">
-     <img src="././public/image/slideshow_2.jpg" />
+     <img src="././public/image/slide2.jpg" />
    </div>
 
    <div class="header-slide-item fade">
-     <img src="././public/image/slideshow_4.jpg" />
+     <img src="././public/image/slide3.png" />
    </div>
 
    <div class="header-slide-item fade">
-     <img src="././public/image/slideshow_1.jpg" />
+     <img src="././public/image/slide4.png" />
    </div>
 
    <!-- Next and previous buttons -->

@@ -11,6 +11,36 @@
       header("Location: index.php?act=dang_nhap");
     }
     ?>
+    <?php
+if (isset($_POST['btn_cart_submit'])) {
+    // Lấy dữ liệu từ form
+    $ho_ten = $_POST['ho_ten'];
+    $email = $_POST['email'];
+    $sdt = $_POST['sdt'];
+    $dia_chi = $_POST['dia_chi'];
+    $phuong_thuc = $_POST['phuong_thuc'];
+    $ghi_chu = $_POST['ghi_chu'];
+
+    // Thêm đơn hàng vào cơ sở dữ liệu
+    $sql = "INSERT INTO don_hang (ma_kh, ho_ten, email, sdt, dia_chi, phuong_thuc, ghi_chu, trang_thai) 
+            VALUES (:ma_kh, :ho_ten, :email, :sdt, :dia_chi, :phuong_thuc, :ghi_chu, 'pending')";
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':ma_kh', $ma_kh);
+    $stmt->bindParam(':ho_ten', $ho_ten);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':sdt', $sdt);
+    $stmt->bindParam(':dia_chi', $dia_chi);
+    $stmt->bindParam(':phuong_thuc', $phuong_thuc);
+    $stmt->bindParam(':ghi_chu', $ghi_chu);
+
+    if ($stmt->execute()) {
+        $thong_bao = "Đơn hàng của bạn đã được đặt thành công!";
+    } else {
+        $thong_bao = "Đã xảy ra lỗi khi đặt hàng.";
+    }
+}
+?>
+
     <form action="" class="form-user" method="post" enctype="multipart/form-data">
       <div class="form-user-group">
         <label for="" class="form-user-label">Họ và tên</label>

@@ -72,35 +72,35 @@
           </div>
         </div>
         <div class="detail-pro-offer-item">
-          <img src="././public/image/combo-icon.webp" alt="" class="detail-pro-offer-img" />
+          <img src="././public/image/hotline-icon.webp" alt="" class="detail-pro-offer-img" />
           <div class="detail-pro-offer-content">
             <span class="detail-pro-offer-text">Nhận Combo quà tặng khi mua giày</span>
             <a href="#" class="detail-pro-offer-more">Xem chi tiết </a>
           </div>
         </div>
         <div class="detail-pro-offer-item">
-          <img src="././public/image/motorbike-icon.webp" alt="" class="detail-pro-offer-img" />
+          <img src="././public/image/hotline-icon.webp" alt="" class="detail-pro-offer-img" />
           <div class="detail-pro-offer-content">
             <span class="detail-pro-offer-text">Nhận Combo quà tặng khi mua giày</span>
             <a href="#" class="detail-pro-offer-more">Xem chi tiết </a>
           </div>
         </div>
         <div class="detail-pro-offer-item">
-          <img src="././public/image/atm-icon.webp" alt="" class="detail-pro-offer-img" />
+          <img src="././public/image/hotline-icon.webp" alt="" class="detail-pro-offer-img" />
           <div class="detail-pro-offer-content">
             <span class="detail-pro-offer-text">Nhận Combo quà tặng khi mua giày</span>
             <a href="#" class="detail-pro-offer-more">Xem chi tiết </a>
           </div>
         </div>
         <div class="detail-pro-offer-item">
-          <img src="././public/image/plane-icon.webp" alt="" class="detail-pro-offer-img" />
+          <img src="././public/image/hotline-icon.webp" alt="" class="detail-pro-offer-img" />
           <div class="detail-pro-offer-content">
             <span class="detail-pro-offer-text">Nhận Combo quà tặng khi mua giày</span>
             <a href="#" class="detail-pro-offer-more">Xem chi tiết </a>
           </div>
         </div>
         <div class="detail-pro-offer-item">
-          <img src="././public/image/trade-icon.webp" alt="" class="detail-pro-offer-img" />
+          <img src="././public/image/hotline-icon.webp" alt="" class="detail-pro-offer-img" />
           <div class="detail-pro-offer-content">
             <span class="detail-pro-offer-text">Nhận Combo quà tặng khi mua giày</span>
             <a href="#" class="detail-pro-offer-more">Xem chi tiết </a>

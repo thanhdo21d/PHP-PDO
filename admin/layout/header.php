@@ -98,11 +98,10 @@
           <a href="index.php?act=thong_ke"><i class="fas fa-chart-line"></i></i>Thống kê</a>
         </li>
         <li>
-          <a href=""><i class="fas fa-shipping-fast"></i></i>Đơn hàng</a>
+          <a href="index.php?act=don_hang"><i class="fas fa-shipping-fast"></i></i>Đơn hàng</a>
         </li>
-
         <li>
-          <a href="settings.html"><i class="fas fa-cog"></i>Cài đặt</a>
+          <a href=""><i class="fas fa-cog"></i>Cài đặt</a>
         </li>
       </ul>
     </nav>

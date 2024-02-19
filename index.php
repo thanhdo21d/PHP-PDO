@@ -1,5 +1,10 @@
 <?php
 // Khởi tạo session bằng session_start()
+
+
+//   https://authentic-shoes.com/
+
+
 session_start();
 ob_start();
 
@@ -341,7 +346,10 @@ if (isset($_GET['act'])) {
     case "thanh_toan":
       include "view/gio_hang/thanh_toan.php";
       break;
-
+      
+      case "history_buy":
+        include "view/gio_hang/history_buy.php";
+        break;
     case "gioi_thieu":
       include "view/layout/gioi_thieu.php";
       break;

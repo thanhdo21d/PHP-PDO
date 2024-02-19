@@ -9,6 +9,7 @@ include "../model/san_pham.php";
 include "../model/tai_khoan.php";
 include "../model/binh_luan.php";
 include "../model/thong_ke.php";
+include "../model/don_hang.php";
 
 include "layout/header.php";
 
@@ -259,6 +260,10 @@ if (isset($_GET['act'])) {
       include "thong_ke/list.php";
       break;
 
+      case "don_hang":
+        $ds_thong_ke_hh = thong_ke_hang_hoa();
+        include "don_hang/list.php";
+        break;
       // case "bieu_do":
       //   $ds_thong_ke_hh = thong_ke_hang_hoa();
       //   include "thong_ke/chart.php";

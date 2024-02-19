@@ -1,4 +1,4 @@
--- Thông tin thư mục dự án mẫu WEB2041:
+-- Thông tin thư mục dự án mẫu 
 
 \*) Thư mục model: chứa các file php trong đó có:
 pdo.php: file chứa các câu hàm thao tác với database, như kết nối db, thực thi câu lệnh sql (thêm, sửa, xóa), truy vấn dữ liệu, ...

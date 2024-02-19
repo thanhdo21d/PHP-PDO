@@ -56,6 +56,7 @@
                   <a href="index.php?act=dang_xuat" class="header-dropdown-link">Đăng xuất</a>
                   <a href="index.php?act=gio_hang" class="header-dropdown-link">Giỏ hàng</a>
                   <a href="index.php?act=thanh_toan" class="header-dropdown-link">Thanh toán</a>
+                  <a href="index.php?act=history_buy" class="header-dropdown-link">Lịch sử mua hàng</a>
                 <?php
                 }
                 ?>

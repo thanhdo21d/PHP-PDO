@@ -1,6 +1,6 @@
 <?php 
 $conn = mysqli_connect("localhost", "root", "", "x-shop-asm");
-
+var_dump($_SESSION['gio_hang']);
 $tong_tien = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_update'])) {
@@ -17,21 +17,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_update'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_pay'])) {
-  $ho_ten = isset($_POST['ho_ten']) ? $_POST['ho_ten'] : 'hidden';
+  // Lấy thông tin khách hàng từ form
+  $ho_ten = isset($_POST['ho_ten']) ? $_POST['ho_ten'] : '';
   $dia_chi = isset($_POST['dia_chi']) ? $_POST['dia_chi'] : '';
   $ghi_chu = isset($_POST['ghi_chu']) ? $_POST['ghi_chu'] : '';
+
+  // Tính tổng tiền từ session
+  $tong_tien = 0;
+  foreach ($_SESSION['gio_hang'] as $hang) {
+      $tong_tien += $hang[3] * $hang[4];
+  }
+
+  // Thêm đơn hàng vào bảng don_hang
   $sql_insert_don_hang = "INSERT INTO don_hang (ho_ten, dia_chi, ghi_chu, tong_tien) VALUES ('$ho_ten', '$dia_chi', '$ghi_chu', '$tong_tien')";
   $result_insert_don_hang = mysqli_query($conn, $sql_insert_don_hang);
+
   if ($result_insert_don_hang) {
+      // Lấy ID của đơn hàng vừa thêm
       $id_don_hang = mysqli_insert_id($conn);
-      foreach ($_SESSION['gio_hang'] as $i => $hang) {
+      // Thêm chi tiết đơn hàng vào bảng chi_tiet_don_hang
+      foreach ($_SESSION['gio_hang'] as $hang) {
           $ma_san_pham = $hang[0];
           $so_luong = $hang[4];
           $gia_ban = $hang[3];
-          // $sql_insert_chi_tiet_don_hang = "INSERT INTO chi_tiet_don_hang (id_don_hang, ma_san_pham, so_luong, gia_ban) VALUES ('$id_don_hang', '$ma_san_pham', '$so_luong', '$gia_ban')";
-          // mysqli_query($conn, $sql_insert_chi_tiet_don_hang);
+          
+          $sql_insert_chi_tiet_don_hang = "INSERT INTO chi_tiet_don_hang (id_don_hang, ma_san_pham, so_luong, gia_ban) VALUES ('$id_don_hang', '$ma_san_pham', '$so_luong', '$gia_ban')";
+          mysqli_query($conn, $sql_insert_chi_tiet_don_hang);
       }
+
+      // Xóa session gio_hang sau khi đã thanh toán
       unset($_SESSION['gio_hang']);
+
+      // Gửi người dùng đến trang cảm ơn hoặc trang xác nhận đơn hàng
+      header('Location: cam-on.php');
+      exit();
+  } else {
+      // Xử lý khi có lỗi thêm đơn hàng
+      echo "Có lỗi khi thêm đơn hàng vào CSDL.";
   }
 }
 ?>

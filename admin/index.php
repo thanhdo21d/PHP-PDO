@@ -63,16 +63,13 @@ if (isset($_GET['act'])) {
         $don_gia = $_POST['don_gia'];
         $giam_gia = $_POST['giam_gia'];
         $hinh = $_FILES['hinh']['name'];
-
         $target_dir = "../public/image/";
         $target_file = $target_dir . basename($_FILES['hinh']['name']);
-
         if (move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)) {
           $thong_bao = "Đăng tải ảnh thành công";
         } else {
           $thong_bao = "Đăng tải ảnh lên thất bại !";
         }
-
         $ngay_nhap = $_POST['ngay_nhap'];
         $mau = $_POST['mau'];
         $mo_ta = htmlentities($_POST['mo_ta']);

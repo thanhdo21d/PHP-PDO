@@ -1,5 +1,7 @@
 <?php
 
+
+
 // ===================Kết nối database=======================//
 function pdo_get_connection()
 {

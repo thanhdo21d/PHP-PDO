@@ -1,20 +1,27 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['tai_khoan']) || empty($_SESSION['tai_khoan'])) {
+    echo '<div class="">bạn không có quyền</div>';
+    exit();
+}
+?>
+<?php
+
 include "../config.php";
 include "../global.php";
 include "../model/pdo.php";
-
 include "../model/danh_muc.php";
+include "../model/blogs.php";
+include "../model/tintuc.php";
 include "../model/san_pham.php";
 include "../model/tai_khoan.php";
 include "../model/binh_luan.php";
 include "../model/thong_ke.php";
 include "../model/don_hang.php";
-
 include "layout/header.php";
-
 if (isset($_GET['act'])) {
+ 
   $act = $_GET['act'];
   switch ($act) {
     case "them_dm":
@@ -26,11 +33,56 @@ if (isset($_GET['act'])) {
       include "danh_muc/add.php";
       break;
 
+
+      case "them_blogs":
+        if (isset($_POST['btn_insert']) && ($_POST['btn_insert'])) {
+          $ten_blogs = $_POST['ten_blogs'];
+          them_blogs($ten_blogs);
+          $thong_bao = "Thêm thành công";
+        }
+        include "blogs/add.php";
+        break;
+
+        case "danh_sach_blogs":
+          $ds_danh_blogs = lay_tat_ca__blogs();
+          include "blogs/list.php";
+          break;
+
+          case "sua_blogs":
+            if (isset($_GET['id_blogs']) && ($_GET['id_blogs']) > 0) {
+              $id_blogs = $_GET['id_blogs'];
+              $blogs = lay__blogs_theo_ma($id_blogs);
+            }
+            include "blogs/update.php";
+            break;
+
+
+            case "cap_nhat_blogs":
+              if (isset($_POST['btn_update']) && ($_POST['btn_update'])) {
+                $id_blogs = $_POST['id_blogs'];
+                $ten_loai = $_POST['ten_loai'];
+                cap_nhat_blogs($id_blogs, $ten_loai);
+                $thong_bao = "Cập nhật thành công";
+              }
+              $ds_danh_blogs = lay_tat_ca__blogs();
+              include "blogs/list.php";
+              break;
+
+
+
+              case "xoa_blogs":
+                if (isset($_GET['id_blogs']) && ($_GET['id_blogs'] > 0)) {
+                  xoa_blogs($_GET['id_blogs']);
+                }
+                $ds_danh_blogs = lay_tat_ca__blogs();
+              include "blogs/list.php";
+                break;
+          
+
     case "danh_sach_dm":
       $ds_danh_muc = lay_tat_ca_danh_muc();
       include "danh_muc/list.php";
       break;
-
     case "xoa_dm":
       if (isset($_GET['ma_loai']) && ($_GET['ma_loai'] > 0)) {
         xoa_danh_muc($_GET['ma_loai']);
@@ -39,6 +91,12 @@ if (isset($_GET['act'])) {
       include "danh_muc/list.php";
       break;
 
+
+
+
+
+
+
     case "sua_dm":
       if (isset($_GET['ma_loai']) && ($_GET['ma_loai']) > 0) {
         $ma_loai = $_GET['ma_loai'];
@@ -46,7 +104,6 @@ if (isset($_GET['act'])) {
       }
       include "danh_muc/update.php";
       break;
-
     case "cap_nhat_dm":
       if (isset($_POST['btn_update']) && ($_POST['btn_update'])) {
         $ma_loai = $_POST['ma_loai'];
@@ -85,6 +142,91 @@ if (isset($_GET['act'])) {
       $ds_danh_muc = lay_tat_ca_danh_muc();
       include "san_pham/add.php";
       break;
+
+
+
+
+      //
+      case "them_tin_tuc":
+        if (isset($_POST['btn_insert']) && ($_POST['btn_insert'])) {
+          $tieu_de = $_POST['tieu_de'];
+          $noi_dung = $_POST['noi_dung'];
+          $hinh = $_FILES['hinh']['name'];
+          $target_dir = "../public/image/";
+          $target_file = $target_dir . basename($_FILES['hinh']['name']);
+          if (move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)) {
+            $thong_bao = "Đăng tải ảnh thành công";
+          } else {
+            $thong_bao = "Đăng tải ảnh lên thất bại !";
+          }
+          $id_blogs = $_POST['id_blogs'];
+          them_tin_tuc($tieu_de, $noi_dung, $hinh,  $id_blogs);
+          $thong_bao = "Thêm thành công";
+        }
+        $ds_danh_blogs = lay_tat_ca__blogs();
+        include "tintuc/add.php";
+        break;
+
+        case "danh_sach_tin_tuc":
+          $danh_sach_sp = lay_tintuc_theo_trang();
+          include "tintuc/list.php";
+          break;
+
+          case "xoa_tin_tuc":
+            if (isset($_GET['id']) && ($_GET['id']) > 0) {
+              $san_pham = xoa_tin_tuc($_GET['id']);
+            }
+            $danh_sach_sp = lay_tintuc_theo_trang();
+            include "tintuc/list.php";
+            break;
+
+            case "sua_tin_tuc":
+              if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                $san_pham = lay_tin_tuc_theo_ma($_GET['id']);
+              }
+              $ds_danh_muc = lay_tat_ca__blogs();
+              include "tintuc/update.php";
+              break;
+        
+            case "cap_nhat_tin_tuc":
+           
+          
+              if (isset($_POST['btn_update']) && ($_POST['btn_update'])) {
+                $id = $_POST['id'];
+                $tieu_de = $_POST['tieu_de'];
+                $hinh = $_FILES['hinh']['name'];
+                $target_dir = "../public/image/";
+                $target_file = $target_dir . basename($_FILES['hinh']['name']);
+                if (move_uploaded_file($_FILES['hinh']['tmp_name'], $target_file)) {
+                  $thong_bao = "Đăng tải ảnh thành công";
+                } else {
+                  $thong_bao = "Cập nhật hình ảnh thất bại !";
+                }
+                $noi_dung = htmlentities($_POST['noi_dung']);
+                $id_blogs = $_POST['id_blogs'];
+                cap_nhat_tin_tuc($id, $tieu_de, $hinh,  $noi_dung, $id_blogs);
+                $thong_bao = "Cập nhật thành công";
+              }
+              $danh_sach_sp = lay_tintuc_theo_trang();
+              include "tintuc/list.php";
+              break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       // case "danh_sach_sp":
       //   $ds_danh_muc = lay_tat_ca_danh_muc();

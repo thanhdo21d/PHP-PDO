@@ -33,3 +33,26 @@ thư mục upload hình ảnh cho client ($img_path)
 
 \*) File index.php(global): đóng vai trò là controller điều khiển trang phía client tiếp nhận các request và thực hiện các yêu cầu đó
 File index.php(admin): đóng vai trò là controller điều khiển trang phía admin tiếp nhận các request và thực hiện các yêu cầu đó
+
+
+// Tạo bảng danh mục tin tức
+CREATE TABLE danhmuctintuc (
+    id_danhmuc INT AUTO_INCREMENT PRIMARY KEY,
+    ten_danhmuc VARCHAR(255) NOT NULL
+);
+
+// Tạo bảng tin tức
+CREATE TABLE tintuc (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    tieu_de VARCHAR(255) NOT NULL,
+    noi_dung TEXT NOT NULL,
+    hinh_anh VARCHAR(255) NOT NULL,
+    id_danh_muc INT,
+    FOREIGN KEY (id_danh_muc) REFERENCES danhmuctintuc(id_danhmuc)
+);
+
+// Thêm dữ liệu mẫu vào bảng danhmuctintuc
+INSERT INTO danhmuctintuc (ten_danhmuc) VALUES
+    ('Tin Công Nghệ'),
+    ('Tin Khuyến Mại'),
+    ('Chính Sách Bán Hàng');

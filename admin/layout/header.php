@@ -22,9 +22,9 @@
 
 <body>
   <!-- Page Preloader -->
-  <div id="preloader">
+  <!-- <div id="preloader">
     <div class="loader"></div>
-  </div>
+  </div> -->
 
   <div class="wrapper">
     <nav id="sidebar">
@@ -58,6 +58,23 @@
           </ul>
         </li>
 
+        <!-- blogs -->
+        <li>
+          <a href="#blogs" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Blogs
+            <i class="fas fa-angle-right float-xl-right"></i>
+          </a>
+          <ul class="collapse list-unstyled" id="blogs">
+            <li>
+              <a href="index.php?act=them_blogs">
+                <i class="fas fa-plus"></i>Thêm Blogs</a>
+            </li>
+            <li>
+              <a href="index.php?act=danh_sach_blogs">
+                <i class="fas fa-list-ul"></i>Danh sách Blogs</a>
+            </li>
+          </ul>
+        </li>
+
         <!-- Sản phẩm -->
         <li>
           <a href="#products" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Sản phẩm
@@ -70,6 +87,24 @@
             <li>
               <a href="index.php?act=danh_sach_sp_trang">
                 <i class="fas fa-list-ul"></i>Danh sách sản phẩm</a>
+            </li>
+          </ul>
+        </li>
+
+
+        <!--  -->
+        <li>
+          <a href="#tintuc" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
+            <i class="fas fa-table"></i>Tin tức
+            <i class="fas fa-angle-right float-xl-right"></i>
+          </a>
+          <ul class="collapse list-unstyled" id="tintuc">
+            <li>
+              <a href="index.php?act=them_tin_tuc"><i class="fas fa-plus"></i>Thêm tin tức</a>
+            </li>
+            <li>
+              <a href="index.php?act=danh_sach_tin_tuc">
+                <i class="fas fa-list-ul"></i>Danh sách tin tức</a>
             </li>
           </ul>
         </li>

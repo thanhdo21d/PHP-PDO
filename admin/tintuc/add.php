@@ -46,7 +46,6 @@
                   <textarea id="txtarea" spellcheck="false" name="noi_dung" class="form-control form-control-lg mb-3" id="textareaExample" rows="3"></textarea>
                 </div>
               </div>
-
               <div class="mb-3 text-center">
                 <input type="reset" value="Nhập lại" class="btn btn-danger mr-3" />
                 <input type="submit" name="btn_insert" value="Thêm mới" class="btn btn-primary mr-3" />
@@ -58,7 +57,6 @@
               echo "<h3 class='alert-text'>$thong_bao</h3>";
             }
             ?>
-
           </div>
         </div>
       </div>

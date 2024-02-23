@@ -177,7 +177,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_pay'])) {
           <div class="form-cart-note">
             <input type="text" name="dia_chi" placeholder="Nhập địa chỉ" required>
             <input type="text" name="ho_ten" placeholder="tên người nhận" required>
-
           </div>
           <div class="form-cart-comeback">
             <a href="index.php?act=san_pham" class="form-cart-backlink">
@@ -186,7 +185,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btn_cart_pay'])) {
             </a>
           </div>
         </div>
-        
         <div class="form-control-right" style="display:flex; gap:10px;">
           <!-- <form method="post"> -->
           <button type="submit" class="form-cart-update" name="btn_cart_update">

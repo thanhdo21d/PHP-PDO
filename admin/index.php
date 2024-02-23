@@ -21,7 +21,6 @@ include "../model/thong_ke.php";
 include "../model/don_hang.php";
 include "layout/header.php";
 if (isset($_GET['act'])) {
- 
   $act = $_GET['act'];
   switch ($act) {
     case "them_dm":
@@ -32,8 +31,6 @@ if (isset($_GET['act'])) {
       }
       include "danh_muc/add.php";
       break;
-
-
       case "them_blogs":
         if (isset($_POST['btn_insert']) && ($_POST['btn_insert'])) {
           $ten_blogs = $_POST['ten_blogs'];
@@ -42,7 +39,6 @@ if (isset($_GET['act'])) {
         }
         include "blogs/add.php";
         break;
-
         case "danh_sach_blogs":
           $ds_danh_blogs = lay_tat_ca__blogs();
           include "blogs/list.php";
